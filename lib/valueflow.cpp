@@ -8754,7 +8754,8 @@ void ValueFlow::setValues(TokenList *tokenlist, SymbolDatabase* symboldatabase, 
     valueFlowSameExpressions(tokenlist);
     valueFlowConditionExpressions(tokenlist, symboldatabase, errorLogger, settings);
 
-    return;
+    if (settings->performanceValueFlowBasic)
+        return;
 
     std::size_t values = 0;
     std::size_t n = 4;

@@ -234,6 +234,9 @@ public:
     /** @brief write results (--output-file=&lt;file&gt;) */
     std::string outputFile;
 
+    /** @brief Experimental: --performance-valueflow=basic */
+    bool performanceValueFlowBasic;
+
     /** @brief Experimental: --performance-valueflow-max-time=T */
     int performanceValueFlowMaxTime;
 

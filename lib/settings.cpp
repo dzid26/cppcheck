@@ -60,6 +60,7 @@ Settings::Settings()
     maxConfigs(12),
     maxCtuDepth(2),
     maxTemplateRecursion(100),
+    performanceValueFlowBasic(false),
     performanceValueFlowMaxTime(-1),
     preprocessOnly(false),
     quiet(false),

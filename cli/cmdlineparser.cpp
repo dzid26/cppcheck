@@ -567,6 +567,10 @@ bool CmdLineParser::parseFromArgs(int argc, const char* const argv[])
             else if (std::strncmp(argv[i], "--performance-valueflow-max-time=", 33) == 0)
                 mSettings->performanceValueFlowMaxTime = std::atoi(argv[i] + 33);
 
+            // Experimental: only perform basic valueflow
+            else if (std::strcmp(argv[i], "--performance-valueflow=basic") == 0)
+                mSettings->performanceValueFlowBasic = true;
+
             // Specify platform
             else if (std::strncmp(argv[i], "--platform=", 11) == 0) {
                 const std::string platform(11+argv[i]);
