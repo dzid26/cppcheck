@@ -8730,7 +8730,7 @@ static std::size_t getTotalValues(TokenList *tokenlist)
 
 void ValueFlow::setValues(TokenList *tokenlist, SymbolDatabase* symboldatabase, ErrorLogger *errorLogger, const Settings *settings)
 {
-    const std::time_t stopTime = (settings->performanceValueFlowMaxTime >= 0) ? (std::time(nullptr) + settings->performanceValueFlowMaxTime) : ~0ULL;
+    const std::time_t stopTime = (settings->performanceValueFlowMaxTime >= 0) ? (std::time(nullptr) + settings->performanceValueFlowMaxTime) : (~0ULL/2);
 
     //std::cout << "startTime=" << std::time(nullptr) << std::endl;
     //std::cout << "stopTime=" << stopTime << std::endl;
